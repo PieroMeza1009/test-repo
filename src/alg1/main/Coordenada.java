@@ -12,5 +12,25 @@ public class Coordenada {
     public Coordenada(double x, double y) {
         this.x = x;
         this.y = y;
-    } ahbdambdambdawbdmhawbd
+    } 
+    public Coordenada(Coordenada c) {
+        this.x = c.x;
+        this.y = c.y;
+    }
+
+    void setX(double x) {
+        this.x = x;
+    }
+
+    void setY(double y) {
+        this.y = y;
+    }
+
+    double getX() {
+        return x;
+    }
+
+    double getY() {
+        return y;
+    }
     }
