@@ -27,10 +27,17 @@ public class Coordenada {
     }
 
     double getX() {
-        return x;
+        return this.x;
     }
 
     double getY() {
-        return y;
+        return this.y;
     }
+    double distancia(Coordenada c) {
+        return Math.sqrt(Math.pow(this.x - c.x, 2) + Math.pow(this.y - c.y, 2));
+    }
+    static double distancia(Coordenada c1, Coordenada c2) {
+        return Math.sqrt(Math.pow(c1.x - c2.x, 2) + Math.pow(c1.y - c2.y, 2));
+    }
+
     }
