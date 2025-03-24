@@ -8,13 +8,20 @@ public class Rectangulo {
         setEsquina1(c1);
         setEsquina2(c2);
     }
-    
+
     public void setEsquina1(Coordenada coo) {
         this.esquina1 = new Coordenada(coo); 
     }
 
     public void setEsquina2(Coordenada coo) {
-        this.esquina2 = new Coordenada(coo); // Se crea una copia para evitar aliasing
+        this.esquina2 = new Coordenada(coo); 
+    }
+    public Coordenada getEsquina1() {
+        return new Coordenada(this.esquina1); 
+    }
+
+    public Coordenada getEsquina2() {
+        return new Coordenada(this.esquina2);
     }
 
 }
