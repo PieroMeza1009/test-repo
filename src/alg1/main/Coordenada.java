@@ -40,12 +40,16 @@ public class Coordenada {
 
 //Calcula la distancia entre el punto actual y otro punto c usando la fórmula de distancia euclidiana
     double distancia(Coordenada c) {
+
+        //Math es una clase de la biblioteca de Java que permite el metodo sqrt
         return Math.sqrt(Math.pow(this.x - c.x, 2) + Math.pow(this.y - c.y, 2));
+                //sqrt calcula la raíz cuadrada de n
     }
 
 //Permite calcular la distancia sin necesidad de crear un objeto.
     static double distancia(Coordenada c1, Coordenada c2) {
         return Math.sqrt(Math.pow(c1.x - c2.x, 2) + Math.pow(c1.y - c2.y, 2));
+                        //Math.pow eleva un número a a la potencia b
     }
 
 //Devuelve la coordenada en formato (x, y), útil para mostrar en pantalla.
