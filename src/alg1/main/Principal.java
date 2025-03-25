@@ -11,4 +11,16 @@ public class Principal {
         Coordenada c2 = new Coordenada(sc.nextDouble(), sc.nextDouble());
         Rectangulo rectA = new Rectangulo(c1, c2);
 
+        System.out.println("Ingrese las coordenadas del segundo rectángulo (x1 y1 x2 y2):");
+        Coordenada c3 = new Coordenada(sc.nextDouble(), sc.nextDouble());
+        Coordenada c4 = new Coordenada(sc.nextDouble(), sc.nextDouble());
+        Rectangulo rectB = new Rectangulo(c3, c4);
+
+        mostrarRectangulo(rectA, "A");
+        mostrarRectangulo(rectB, "B");
+    
+     public static void mostrarRectangulo(Rectangulo r, String nombre) {
+        System.out.println("Rectángulo " + nombre + ": " + r);
+    }
+
 }
