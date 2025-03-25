@@ -18,9 +18,31 @@ public class Principal {
 
         mostrarRectangulo(rectA, "A");
         mostrarRectangulo(rectB, "B");
+
+        if (Verificador.sobreponen(rectA, rectB)) {
+            System.out.println("Los rectángulos A y B se sobreponen.");
+            Rectangulo areaSobre = calcularSobreposicion(rectA, rectB);
+            System.out.println("Área de sobreposición: " + areaSobre.calculoArea());
+        } else if (Verificador.tocan(rectA, rectB)) {
+            System.out.println("Los rectángulos A y B están juntos.");
+        } else {
+            System.out.println("Los rectángulos A y B son disjuntos.");
+        }
+        sc.close();
+    }
     
-     public static void mostrarRectangulo(Rectangulo r, String nombre) {
+    public static void mostrarRectangulo(Rectangulo r, String nombre) {
         System.out.println("Rectángulo " + nombre + ": " + r);
     }
+    public static Rectangulo calcularSobreposicion(Rectangulo A, Rectangulo B) {
+        double x1 = Math.max(A.getEsquina1().getX(), B.getEsquina1().getX());
+        double y1 = Math.max(A.getEsquina1().getY(), B.getEsquina1().getY());
+        double x2 = Math.min(A.getEsquina2().getX(), B.getEsquina2().getX());
+        double y2 = Math.min(A.getEsquina2().getY(), B.getEsquina2().getY());
+
+        return new Rectangulo(new Coordenada(x1, y1), new Coordenada(x2, y2));
+    }
+
+
 
 }
