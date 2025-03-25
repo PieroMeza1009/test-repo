@@ -30,4 +30,10 @@ public class Rectangulo {
         return "Rectángulo formado por las esquinas " + esquina1.toString() + " y " + esquina2.toString();
     }
 
+    public double calculoArea() {
+        double base = Math.abs(esquina2.getX() - esquina1.getX());
+        double altura = Math.abs(esquina2.getY() - esquina1.getY());
+        return base * altura;
+    }
+
 }
