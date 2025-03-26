@@ -17,11 +17,13 @@ public class Principal {
         Coordenada c1 = new Coordenada(sc.nextDouble(), sc.nextDouble()); //lee las coordenadas x1, y1, x2, y2 usando sc.nextDouble
         Coordenada c2 = new Coordenada(sc.nextDouble(), sc.nextDouble()); // método de la clase Scanner en Java que lee un número decimal
         Rectangulo rectA = new Rectangulo(c1, c2); //creo un objeto Rectangulo llamado rectA usando c1 y c2
+        contenedor.addRectangulo(rectA);
 
         System.out.println("Ingrese las coordenadas del segundo rectángulo (x1 y1 x2 y2):");
         Coordenada c3 = new Coordenada(sc.nextDouble(), sc.nextDouble());
         Coordenada c4 = new Coordenada(sc.nextDouble(), sc.nextDouble());
         Rectangulo rectB = new Rectangulo(c3, c4);
+        
 
         mostrarRectangulo(rectA, "A");
         mostrarRectangulo(rectB, "B");
@@ -35,6 +37,10 @@ public class Principal {
             System.out.println("Los rectángulos A y B están juntos.");
         } else {
             System.out.println("Los rectángulos A y B son disjuntos.");
+
+            System.out.println("\nResumen de rectángulos almacenados:");
+            System.out.println(contenedor);
+
         }
         sc.close();
     }
