@@ -13,7 +13,7 @@ public class ContainerRect {
         this.distancias = new double[n];
         this.areas = new double[n];
     }
-    
+
     public void addRectangulo(Rectangulo r) {
         if (numRec < n) {
             rectangulos[numRec] = r;
@@ -24,4 +24,20 @@ public class ContainerRect {
             System.out.println("No se pueden agregar más rectángulos. Capacidad máxima alcanzada.");
         }
 
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Rectangulo\tCoordenadas\t\tDistancia\tÁrea\n");
+        for (int i = 0; i < numRec; i++) {
+            sb.append((i + 1)).append("\t")
+              .append(rectangulos[i].toString()).append("\t")
+              .append(String.format("%.3f", distancias[i])).append("\t")
+              .append(String.format("%.2f", areas[i])).append("\n");
+        }
+        return sb.toString();
+    }
 }
+
+
