@@ -34,7 +34,7 @@ public class Principal {
     }
     
     public static void mostrarRectangulo(Rectangulo r, String nombre) {
-        System.out.println("Rectángulo " + nombre + ": " + r); // Imprime la información del rectángulo usando toString
+        System.out.println("Rectángulo " + nombre + ": " + r); // Imprime la información del rectángulo usando toString.
     }
     public static Rectangulo calcularSobreposicion(Rectangulo A, Rectangulo B) {
         double x1 = Math.max(A.getEsquina1().getX(), B.getEsquina1().getX());    //Uso Math.max para encontrar la esquina inferior izquierda del área de sobreposición
@@ -44,7 +44,5 @@ public class Principal {
 
         return new Rectangulo(new Coordenada(x1, y1), new Coordenada(x2, y2));
     }
-
-
 
 }
